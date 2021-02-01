@@ -1,0 +1,56 @@
+.container_opc{
+  margin-top: 100px;
+  position: relative;
+  animation-name: aparicion;
+  animation-duration: 2s;
+  .container_img-triangle{
+    text-align: center;
+  }
+  .container_img-rock, .container_img-paper,.container_img-scissor{
+    position: absolute;
+    border-radius: 50%;
+  }
+  .container_img-rock{
+    align-items: center;
+    background-color: azure;
+    border: 20px solid #cc1111;
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    left: 35%;
+    top: 60%;
+    width: 100px;
+  }
+  .container_img-paper{
+    align-items: center;
+    background-color: azure;
+    border: 20px solid #3344ff;
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    top: -10%;
+    left: 10%;
+    width: 100px;
+  }
+  .container_img-scissor{
+    align-items: center;
+    background-color: azure;
+    border: 20px solid #ff9911;
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    top: -10%;
+    left: 65%;
+    width: 100px;   
+  }
+
+}
+
+@keyframes aparicion {
+  to{
+    opacity: 1;
+  }
+  from{
+    opacity: 0;
+  }
+}

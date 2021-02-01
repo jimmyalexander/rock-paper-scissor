@@ -1,0 +1,99 @@
+.container_run{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 100px;
+  padding: 20px;
+  .run_user{
+    
+    .user{
+      animation-name: aparicionUser;
+      animation-duration: 2s;
+      align-items: center;
+      background-color: azure;
+      border: 20px solid #11cc5f;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      height: 80px;
+      left: 35%;
+      top: 60%;
+      width: 80px;
+    }
+  }
+  .container_button{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h1{ 
+      position: relative;
+      top: 500px;
+      animation-name: apacionButton;
+      animation-delay: 2s;
+      animation-direction: reverse;
+      animation-duration: 2s;
+      color: azure;
+      width: 100%;
+    }
+    button{
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      color: #333;
+      padding: 10px;
+      border-radius: 10px;
+    }
+  }
+  .run_machine{
+   
+    height: 100px;
+    width: 100px;
+    .machine{
+      animation-name: rotateMachine;
+      animation-duration: 2s;
+      align-items: center;
+      background-color: azure;
+      border: 20px solid #bc11cc;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      height: 80px;
+      left: 35%;
+      top: 60%;
+      width: 80px;
+    }
+  }
+}
+
+@keyframes rotateMachine{
+  to{
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  from{
+    opacity: 0;
+    transform: rotate(1500deg);
+  }
+}
+
+@keyframes apacionButton{
+  0%{
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  50%{
+    opacity: 1;
+    transform: translateY(-500px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(-500px);}
+ 
+}
+
+@keyframes aparicionUser {
+  to{
+    opacity: 1;
+  }
+  from{
+    opacity: 0;
+  }
+}

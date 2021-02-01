@@ -15,7 +15,11 @@ export const App = () => {
   });
   const [resultadoUser, setResultadoUser] = useState('');
   const [resultadoMaquina, setResultadoMaquina] = useState('')
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+  const [maquinainit, setMaquinaInit] = useState(false);
+  const [resp, setResp] = useState('');
+  const [winner, setWinner] = useState('');
+
 
   return (
     <UserContext.Provider value={
@@ -27,7 +31,10 @@ export const App = () => {
       resultadoUser,
       setResultadoUser,
       count,
-      setCount
+      setCount,
+      maquinainit,setMaquinaInit,
+      resp,setResp,
+      winner,setWinner
      }
     }>
       <Score/>
