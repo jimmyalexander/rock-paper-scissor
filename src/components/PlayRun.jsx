@@ -7,7 +7,7 @@ import { Scissor } from './Scissor';
 
 export const PlayRun = () => {
   
-  const { select, setSelect, resp, winner, setWinner, count, setCount } = useContext( UserContext );
+  const { select, setSelect, resp, setResp, winner, setWinner, count, setCount } = useContext( UserContext );
  
   //Emojis mostrados por la maquina
   /* const faceWinner = ['😂','😁','😎'];
@@ -33,10 +33,11 @@ export const PlayRun = () => {
       statePaper: false,
       stateScisoors: false,
     })
-    setWinner(' ');
+    setWinner('');
     if( winner === 'YOU WIN'){
       setCount( count + 1)
     }
+    setResp('')
   }
   return (
     <div className={ select.opc === '' ? 'none' : 'container_run'}>
