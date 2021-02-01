@@ -7,11 +7,10 @@ import { Scissor } from './Scissor';
 
 export const PlayRun = () => {
   
-  const { select, setSelect, resp, winner, setWinner, count, setCount } = useContext( UserContext );
+  const { select, setSelect, resp, setResp, winner, setWinner, count, setCount } = useContext( UserContext );
  
-  //Emojis mostrados por la maquina
-  /* const faceWinner = ['😂','😁','😎'];
-  const faceLose = ['😠','😡','😭']; */
+  const faceWinner = ['😂','😁','😎'];
+  const faceLose = ['😠','😡','😭']; 
   const opc = () => {
     if( select.opc === "/static/media/icon-rock.476e90a9.svg"){
       return <Rock />
@@ -24,7 +23,7 @@ export const PlayRun = () => {
     }
   }
   
-  
+  console.log(winner)
   
   const handleClick = () => {
     setSelect({
@@ -33,10 +32,11 @@ export const PlayRun = () => {
       statePaper: false,
       stateScisoors: false,
     })
-    setWinner(' ');
+    setWinner('');
     if( winner === 'YOU WIN'){
       setCount( count + 1)
     }
+    setResp('')
   }
   return (
     <div className={ select.opc === '' ? 'none' : 'container_run'}>
@@ -54,7 +54,9 @@ export const PlayRun = () => {
           onClick={ handleClick }
         >Play Again</button>
       </div>
-
+      <div className='run_emoji'> 
+         { winner === 'YOU WIN'?  faceLose[Math.floor(Math.random()  * (3 - 0)) + 0] : faceWinner[Math.floor(Math.random()  * (3 - 0)) + 0]}
+       </div>
       <div className='run_machine' >
         <div className='machine'>
           <img src={ resp } alt=''/>

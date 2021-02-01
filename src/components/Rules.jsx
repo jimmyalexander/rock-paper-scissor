@@ -10,7 +10,7 @@ export const Rules = () => {
   }
   return (
     <div className={ select.opc !== '' ? 'none' : ''}>
-      <div className={ cambio ===false ? 'none' : 'container_rules'}>
+      <div className={ cambio ===false ? 'container_rules' : 'container_rules aparicionRules'}>
         <div className='container_rules-img' >
           <figure>
             <button onClick={handleClick} className={ cambio === false ? 'none' : 'button_cerrar'}>X</button>

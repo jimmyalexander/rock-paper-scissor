@@ -1,21 +1,21 @@
-.none{
-  animation-name: aparicionRules ;
-  animation-duration: 2s;
-  animation-direction: alternate;
-  display: none;
-}
+
 
 .container_rules{
-  animation-name: aparicionRules ;
-  animation-duration: 2s;
-  animation-direction: alternate;
+  position: absolute;
+  top: -100%;
+  left: 10%;
+  transition: top;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
   .button_cerrar{
     position: absolute;
-    background-color: white;
+    background-color: #ccc;
     border: none;
-    top: 12%;
-     left: 85%;
-     color: #aaa;
+    border-radius: 5px;
+    padding: 5px;
+    width: 40%;
+    left: 20%;
+     color: #999;
      z-index: 1;
   }
   img{
@@ -33,11 +33,31 @@
     
 }
 
-@keyframes aparicionRules{
-  to{
-    transform: translatey(-500px); 
+.aparicionRules{
+  top: 20%;
+}
+
+@media ( min-width: 560px){
+  .container_rules{
+    width: auto;
+    left: 20%;
+    .button_cerrar{
+    }
   }
-  from{
-    transform: translateY(500px);
+}
+
+@media ( min-width: 781px){
+  .container_rules{
+    left: 30%;
+    .button_cerrar{
+    }
+  }
+}
+
+@media ( min-width: 960px){
+  .container_rules{
+    left: 35%;
+    .button_cerrar{
+    }
   }
 }

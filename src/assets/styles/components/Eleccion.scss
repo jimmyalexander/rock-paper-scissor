@@ -54,3 +54,65 @@
     opacity: 0;
   }
 }
+
+
+
+@media ( min-width: 560px){
+  .container_opc{
+
+    .container_img-paper{
+      left: 20%;
+    }
+    .container_img-scissor{
+      left: 60%;
+    }
+    .container_img-rock{
+      left: 40%;
+    }
+  }
+}
+
+@media ( min-width: 781px){
+  .container_opc{
+
+    .container_img-paper{
+      left: 30%;
+    }
+    .container_img-scissor{
+      left: 55%;
+    }
+    .container_img-rock{
+      left: 42%;
+    }
+  }
+}
+
+@media ( min-width: 960px){
+  .container_opc{
+
+    .container_img-paper{
+      left: 33%;
+    }
+    .container_img-scissor{
+      left: 55%;
+    }
+    .container_img-rock{
+      left: 44%;
+    }
+  }
+}
+
+@media ( min-width: 1080px){
+  .container_opc{
+
+    .container_img-paper{
+      left: 35%;
+    }
+    .container_img-scissor{
+      left: 55%;
+    }
+    .container_img-rock{
+      left: 44%;
+    }
+  }
+}
